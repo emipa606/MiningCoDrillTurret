@@ -9,7 +9,7 @@ public class JobDriver_OperateDrillTurret : JobDriver
 {
     private const TargetIndex DrillTurretIndex = TargetIndex.A;
 
-    public override bool TryMakePreToilReservations(bool errorOnFail)
+    public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
         return pawn.Reserve(TargetThingA, job);
     }

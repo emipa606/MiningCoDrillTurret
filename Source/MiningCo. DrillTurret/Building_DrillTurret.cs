@@ -29,6 +29,12 @@ internal class Building_DrillTurret : Building
 
     private readonly Vector3 turretTopScale = new(4f, 1f, 4f);
 
+    public Sustainer LaserDrillSoundSustainer = null;
+
+    public int NextDrillTick = 0;
+
+    public IntVec3 TargetPosition = IntVec3.Invalid;
+
     private bool designatedOnly;
 
     private int drillDamageAmount;
@@ -43,11 +49,7 @@ internal class Building_DrillTurret : Building
 
     private Effecter laserDrillEffecter;
 
-    public Sustainer LaserDrillSoundSustainer = null;
-
     private MiningMode miningMode = MiningMode.OresAndRocks;
-
-    public int NextDrillTick = 0;
 
     private int nextUpdateTick;
 
@@ -56,8 +58,6 @@ internal class Building_DrillTurret : Building
     private CompPowerTrader powerComp;
 
     private PowerMode powerMode = PowerMode.High;
-
-    public IntVec3 TargetPosition = IntVec3.Invalid;
 
     private Matrix4x4 turretTopMatrix;
 
@@ -166,12 +166,9 @@ internal class Building_DrillTurret : Building
         if (Find.TickManager.TicksGame >= nextUpdateTick)
         {
             nextUpdateTick = Find.TickManager.TicksGame + UpdatePeriodInTicks;
-            if (TargetPosition.IsValid)
+            if (TargetPosition.IsValid && !isValidTargetAt(TargetPosition))
             {
-                if (!isValidTargetAt(TargetPosition))
-                {
-                    resetTarget();
-                }
+                resetTarget();
             }
 
             if (!TargetPosition.IsValid)

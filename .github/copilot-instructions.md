@@ -1,64 +1,29 @@
-# GitHub Copilot Instructions for MiningCo. DrillTurret (Continued) Mod
-
+# GitHub Copilot Instructions for MiningCo. DrillTurret (Continued)
 ## Mod Overview and Purpose
-
-The **MiningCo. DrillTurret (Continued)** mod is an update of the original mod by Rikiki, enhancing gameplay in RimWorld by adding advanced mining technology. The centerpiece of this mod is the Drill Turret, a sophisticated device designed to automatically drill nearby ores and natural rocks, thereby streamlining your colony’s mining operations.
-
-### Purpose
-- Introduce an automated system to improve and simplify the mining process within the game.
-- Provide players with a strategic resource management tool that enhances gameplay and immersion.
-
+MiningCo. DrillTurret is a mod for the game RimWorld that adds a new turret called the drill turret. The drill turret can automatically drill nearby ores and natural rocks. The mod includes several features and systems that allow players to customize the behavior of the drill turret and improve its efficiency.
 ## Key Features and Systems
 
-1. **Drill Turret Addition**:
-    - Automatically drills nearby ores and natural rocks.
-    - Configurable mining modes allow selection between mining only ores, only rocks, or both.
-
-2. **Improved Drilling Efficiency**:
-    - Manning the turret with a high-level miner increases its drilling speed (e.g., a level 20 miner can mine twice as fast using the turret).
-    - Additional research options are available to boost the turret’s efficiency and resource yield.
-
-3. **Research Integration**:
-    - Research projects linked to improving drill turret efficiency and outcomes, integrated within the existing RimWorld research system.
-
-4. **Dynamic Textures**:
-    - Dynamically handles transparent textures to enhance visual feedback.
+  * Automatic drilling: The drill turret can automatically drill nearby ores and natural rocks.
+  * Mining mode: The mining mode can be switched between only ores, only rocks, and both.
+  * Manning: Manning the turret will improve its drilling speed, with level 20 miners using the drill turret mining 2x faster.
+  * Drill efficiency and yield: Drill efficiency and yield can be improved via one additional research.
 
 ## Coding Patterns and Conventions
-
-- **C# File Organization**: Code is modularly divided into specific files for different functionalities such as job management, alerts, and utility functions.
-- **Consistent Naming Conventions**: Utilizes PascalCase for class and method names to maintain readability and consistency across the codebase.
-- **XML Def Integration**: XML files define various game elements such as effects, jobs, research projects, and buildings, allowing for easy customization and scalability.
-
+The mod follows standard coding patterns and conventions used in RimWorld modding. The code is organized into several classes, each responsible for a specific aspect of the drill turret's behavior. The code is written in C# and includes XML files that define the mod's assets and settings.
 ## XML Integration
-
-- **Effecter_LaserDrill.xml**: Defines visual and auditory effects for the drill turret operations.
-- **Jobs_Work.xml**: Specifies job definitions related to operating the drill turret.
-- **ResearchProjects_DrillTurret.xml**: Contains definitions for research projects improving turret performance.
-- **Buildings_DrillTurret.xml**: Outlines the construction parameters and behavior of the drill turret structure.
-- **WorkGivers.xml**: Details work giver definitions for assigning operational jobs to the drill turret.
-
+The mod includes several XML files that define the mod's assets and settings. These files are located in the "Defs" folder and include definitions for effects, jobs, research projects, thing defs, and work givers. The XML files are integrated into the mod using the RimWorld Defs system, which allows them to be loaded and used at runtime.
 ## Harmony Patching
-
-- **Harmony** is not explicitly mentioned, but if needed, patterns for patching methods and classes should follow conventional Harmony practices, such as using HarmonyPostfix or HarmonyPrefix attributes on methods that require modification.
-
+The mod uses Harmony patching to modify the behavior of existing RimWorld classes and methods. Harmony patching is a powerful tool that allows modders to add custom code to existing game code without having to modify the game's source code. The mod includes several Harmony patches that modify the behavior of the drill turret and other RimWorld classes.
 ## Suggestions for Copilot
+GitHub Copilot can be a valuable tool for RimWorld modders. Here are some suggestions for using Copilot with this mod:
 
-1. **Code Suggestions**:
-   - Suggest streamlined methods for interacting with RimWorld’s job and work giver systems.
-   - Offer efficient loops and conditional logic for managing turret operations and resource extraction processes.
+  * Use Copilot to generate code for new features and systems.
+  * Use Copilot to generate XML files for new assets and settings.
+  * Use Copilot to generate Harmony patches for modifying existing game code.
+  * Use Copilot to generate documentation for the mod, including code comments and README files.
+  * Use Copilot to generate unit tests for the mod's code.
 
-2. **XML Definitions**:
-   - Generate XML elements accurately reflecting in-game mechanics, ensuring alignment with RimWorld standards.
-   - Assist in creating cohesive and error-free XML entries, particularly for new effects, job definitions, and building setups.
-
-3. **Harmony Assistance**:
-   - Propose Harmony patches for modifying existing game mechanics or introducing new functionalities without affecting core game files.
-
-4. **Dynamic Texture Drawing**:
-   - Aid in implementing efficient rendering techniques to handle dynamic texture updates on the drill turret, enhancing visual feedback.
-
-By adhering to these structured guidelines, mod developers can effectively leverage GitHub Copilot to maintain and enhance the MiningCo. DrillTurret mod, ensuring comprehensive integration and enriched gameplay experiences.
+By following these guidelines, you can use GitHub Copilot to help you develop and maintain the MiningCo. DrillTurret mod.
 
 ## Project Solution Guidelines
 - Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
@@ -72,4 +37,6 @@ By adhering to these structured guidelines, mod developers can effectively lever
 ## Hard rules (must follow)
 - Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
 - Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+- When mentioning SonarQube issues, automatically use the SonarQube MCP service to fetch and address issues instead of making inferred fixes without querying SonarQube first.
+- When mentioning the rimworld log, automatically use the Rimworld MCP service to fetch the log.
 

@@ -5,6 +5,7 @@
 Update of Rikikis mod https://steamcommunity.com/sharedfiles/filedetails/?id=974398773
 
 - Added mod setting to reduce power draw to 25W while idle (no target in range), ramping up to full power while actively drilling
+- Added gizmo to control power draw and efficiency
 
 ![Image](https://img.litet.net/logos/Notice.png)
 	

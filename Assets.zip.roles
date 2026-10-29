@@ -1,0 +1,11 @@
+Textures/Effects/DrillTurret_LaserBeam.png.dds.split image:Default
+Textures/Things/Building/DrillTurret_Off.png.dds.split image:Default
+Textures/Things/Building/DrillTurret_On.png.dds.split image:Default
+Textures/Things/Building/MenuIcon_DrillTurret.png.dds.split image:Default
+Textures/Ui/Commands/CommandButton_SwitchMode.png.dds.split image:Default
+Textures/Ui/Commands/CommandButton_SwitchMode_Both.png.dds.split image:Default
+Textures/Ui/Commands/CommandButton_SwitchMode_Ores.png.dds.split image:Default
+Textures/Ui/Commands/CommandButton_SwitchMode_Rocks.png.dds.split image:Default
+Textures/Ui/Commands/CommandButton_SwitchPower_High.png.dds.split image:Default
+Textures/Ui/Commands/CommandButton_SwitchPower_Low.png.dds.split image:Default
+Textures/Ui/Commands/CommandButton_SwitchPower_Medium.png.dds.split image:Default
